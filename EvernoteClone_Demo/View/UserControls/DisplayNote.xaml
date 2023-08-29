@@ -10,13 +10,13 @@
         <TextBlock Text="{Binding Title}"                   
                     Foreground="Black"
                     Margin="15"
-                    FontSize="20"
+                    FontSize="15"
                     FontWeight="Bold"
                     VerticalAlignment="Center"/>
         <TextBlock Text="{Binding UpdateAtTime}"                   
                    Foreground="DodgerBlue"
                    Margin="15"
-                   FontSize="15"
+                   FontSize="12"
                    VerticalAlignment="Center"/>
     </StackPanel>
 </UserControl>
