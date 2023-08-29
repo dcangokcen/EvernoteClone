@@ -63,6 +63,7 @@
         </ListView>
         <ListView DockPanel.Dock="Left"
                   Width="140"
+                  SelectedItem="{Binding SelectedNote, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                   ItemsSource="{Binding Notes}">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -97,6 +98,9 @@
                           Width="50"
                           IsEditable="True"
                           TextBoxBase.TextChanged="fontSizeComboBox_TextChanged"/>
+                <Button x:Name="saveButton"
+                        Content="Save"
+                        Click="saveButton_Click"/>
             </ToolBar>
         </ToolBarTray>
         <Grid>
