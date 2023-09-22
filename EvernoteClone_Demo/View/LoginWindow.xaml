@@ -14,7 +14,16 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid DataContext="{StaticResource vm}">
-        <StackPanel Visibility="{Binding LoginVis}">
+        <StackPanel Visibility="{Binding LoginVis}"
+                    Margin="10">
+            <TextBlock Text="Username:"/>
+            <TextBox Text="{Binding Username, Mode=TwoWay}"/>
+            <TextBlock Text="Pasword:"/>
+            <TextBox Text="{Binding Password, Mode=TwoWay}"/>
+            <Button Command="{Binding LoginCommand}"
+                    Content="Login"
+                    CommandParameter="{Binding User}"
+                    Margin="0,5"/>
             <TextBlock Text="Register"
                        Foreground="DodgerBlue"
                        TextDecorations="Underline">
@@ -26,7 +35,21 @@
             </TextBlock>
         </StackPanel>
         
-        <StackPanel Visibility="{Binding RegisterVis}">
+        <StackPanel Visibility="{Binding RegisterVis}" Margin="10">
+            <TextBlock Text="Username:"/>
+            <TextBox Text="{Binding User.Username, Mode=TwoWay}"/>
+            <TextBlock Text="Name:"/>
+            <TextBox Text="{Binding User.Name, Mode=TwoWay}"/>
+            <TextBlock Text="Lastname:"/>
+            <TextBox Text="{Binding User.Lastname, Mode=TwoWay}"/>
+            <TextBlock Text="Pasword:"/>
+            <TextBox Text="{Binding User.Password, Mode=TwoWay}"/>
+            <TextBlock Text="Confirm Pasword:"/>
+            <TextBox Text="{Binding User.ConfirmPassword, Mode=TwoWay}"/>
+            <Button Command="{Binding RegisterCommand}"
+                    Content="Login"
+                    CommandParameter="{Binding User}"
+                    Margin="0,5"/>
             <TextBlock Text="Login"
                        Foreground="DodgerBlue"
                        TextDecorations="Underline">
